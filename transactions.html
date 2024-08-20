@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+</head>
+<body>
+    <h1>All Transactions (Blockchain)</h1>
+    <table border="1">
+        <tr>
+            <th>Index</th>
+            <th>Timestamp</th>
+            <th>Data</th>
+            <th>Previous Hash</th>
+            <th>Hash</th>
+        </tr>
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction['index'] }}</td>
+            <td>{{ transaction['timestamp'] }}</td>
+            <td>{{ transaction['data'] }}</td>
+            <td>{{ transaction['previous_hash'] }}</td>
+            <td>{{ transaction['hash'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Add Another Transaction</a> | 
+    <a href="/verify_transactions">Verify Transactions</a>
+</body>
+</html>

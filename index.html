@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Transaction</title>
+</head>
+<body>
+    <h1>Add a Transaction</h1>
+    <form action="/add_transaction" method="POST">
+        <label for="drug_id">Drug ID:</label><br>
+        <input type="text" id="drug_id" name="drug_id" required><br><br>
+
+        <label for="action">Action:</label><br>
+        <input type="text" id="action" name="action" required><br><br>
+
+        <label for="manufacturer">Manufacturer:</label><br>
+        <input type="text" id="manufacturer" name="manufacturer" required><br><br>
+
+        <button type="submit">Submit Transaction</button>
+    </form>
+    <br>
+    <a href="/view_transactions">View All Transactions</a> | 
+    <a href="/verify_transactions">Verify Transactions</a>
+</body>
+</html>
